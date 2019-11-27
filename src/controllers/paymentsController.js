@@ -33,6 +33,15 @@ module.exports = {
               email: email
             },
             auto_return : "all",
+            payment_methods: {
+              
+              excluded_payment_types: [
+                  {
+                      id: "ticket"
+                  }
+              ],
+              installments: 1
+          },
             external_reference : id,
             back_urls : {
               success : getFullUrl(req) + "/payments/success",
